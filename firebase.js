@@ -17,22 +17,12 @@ function writeUserData(userId, email, password) {
     });
 }
 
-read_data = 0
-function readUserData(userId) {
-    firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-        username = (snapshot.val() && snapshot.val().email) || 'Anonymous';
-        var doc = document.getElementById("sahil");
-        doc.innerHTML = username;
-        read_data = 1
-    });
-}
-
 function login() {
     var form= document.forms[0];
 
-    var name =form["uname"].value
-    var password= form["psw"].value
-    var email = form["email"].value
+    var name =form["uname"].value;
+    var password= form["psw"].value;
+    var email = form["email"].value;
 
     writeUserData(name,email,password)
 }

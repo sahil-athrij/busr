@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>BUSR</title>
-
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
     <link rel = "stylesheet"
           type = "text/css"
           href = "style.css" />
 
-    <script type="text/javascript" src="header.js"></script>
     <script type="text/javascript" src="map.js"></script>
-
+    <script type="text/javascript" src="firebase.js"></script>
 </head>
 <body>
 
 
 
-
+<script>firebase.initializeApp(config);</script>
 
 <div class="topnav" id="topnavbar">
     <a href=index.html>Home</a>
     <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
 
 
 </div>
@@ -48,8 +47,12 @@
             <label><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">Login</button>
-            <input type="checkbox" checked="checked"> Remember me
+
+            <label>Remember me</label><label>
+            <input type="checkbox" checked="checked">
+
+            <button  onclick="login()">Login</button>
+        </label>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
@@ -57,16 +60,17 @@
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </form>
+
 </div>
+
+
 
 
 
 
 <script>firebase.initializeApp(config);</script>
 <script>
-    writeUserData("sahil1234","sahil athrij","sahilathrij@gmail.com")
-    readUserData("sahil1234")
-
+    writeUserData("sahil134","sahil athrij","sahilathrij@gmail.com");
 
 </script>
 
@@ -80,7 +84,7 @@
 
 
 <script>
-    // Get the modal
+    /*// Get the modal
     var modal = document.getElementById('id01');
 
     // When the user clicks anywhere outside of the modal, close it
@@ -88,7 +92,7 @@
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    }
+    }*/
 </script>
 
 
