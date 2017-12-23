@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BUSR</title>
+
+
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "style.css" />
+
+    <script type="text/javascript" src="header.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+
+</head>
+<body>
+
+
+
+
+
+<div class="topnav" id="topnavbar">
+    <a href=index.html>Home</a>
+    <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+
+
+</div>
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+    <!-- Modal Content -->
+    <form class="modal-content animate">
+        <div class="imgcontainer">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label><b>Create Account</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter email" name="email" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+
+
+
+
+<script>firebase.initializeApp(config);</script>
+<script>
+    writeUserData("sahil1234","sahil athrij","sahilathrij@gmail.com")
+    readUserData("sahil1234")
+
+
+</script>
+
+
+<div id="map"></div>
+
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9aXh75MJy7q_qGd-_irvNwiM8vR3Zfhk&callback=initMap">
+</script>
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+
+</body>
+</html>

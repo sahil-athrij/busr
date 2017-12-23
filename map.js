@@ -2,10 +2,6 @@
  * Created by sahil on 12/14/2017.
  */
 
-function getlocation() {
-    if (navigator.geolocation)
-}
-
 locations = [
     ['bus1', 12.890542, 76.274856, 4],
     ['bus2', -33.923036, 151.259052, 4],
