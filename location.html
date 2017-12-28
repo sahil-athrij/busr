@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <meta charset="UTF-8">
+    <title>Location</title>
+    <script type="text/javascript" src="jav.js"></script>
+</head>
+<body>
+<button onclick="getLocation()">locate</button>
+
+<button onclick="storelocation()">Save</button>
+
+<p id="demo"></p>
+<p id="span"></p>
+<p id="div"></p>
+<script>
+    var x = document.getElementById("demo");
+    var y = document.getElementById("span");
+    var z = document.getElementById("div");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+        y.innerHTML = position.coords.latitude;
+        z.innerHTML = position.coords.longitude;
+
+    }
+</script>
+
+
+
+</body>
+</html>

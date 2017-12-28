@@ -12,9 +12,11 @@
 
 #topnavbar {
 
-    background-color: rgba(255,255,255,1);
+    border-radius: 25px;
+    background-color: #333;
     overflow: hidden;
     position: center;
+    padding: 20px;
     left:33%;
     width: 100%;
     margin: 0 auto;
@@ -23,22 +25,20 @@
 
 }
 
-
-
 /* Style the links inside the navigation bar */
 #topnavbar a {
     float: left;
-    color: darkgray;
-    text-align: center;
-    padding: 2% 6%;
+    display: block;
+    color: #f2f2f2;
+    text-align: left;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 120%;
-    font-family: roboto;
 
 }
 #topnavbar a:hover {
 
-    color: #dddddd;
+    background-color: #ddd;
+    color: black;
 }
 
 /* created by sha ahemed @ 21st dec */
